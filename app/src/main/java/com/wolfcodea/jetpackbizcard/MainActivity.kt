@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
@@ -84,17 +85,32 @@ fun CreateBizCard() {
                     thickness = 2.dp,
                     color = Color.LightGray,
                 )
-                Column(modifier = Modifier.padding(5.dp)) {
-                    Text(
-                        text = "Rodrigo S.",
-                        style = MaterialTheme.typography.displaySmall,
-                        color = MaterialTheme.colorScheme.primaryContainer,
-                    )
+                CreateInfo()
+                Button(
+                    onClick = {}
+                ) {
+                    Text(text = "Show Portfolio", style = MaterialTheme.typography.labelLarge)
                 }
             }
 
 
         }
+    }
+}
+
+@Composable
+private fun CreateInfo() {
+    Column(modifier = Modifier.padding(5.dp)) {
+        Text(
+            text = "Rodrigo Silva",
+            style = MaterialTheme.typography.displaySmall,
+            color = MaterialTheme.colorScheme.primaryContainer,
+        )
+        Text(
+            text = "Mobile Developer",
+            style = MaterialTheme.typography.labelMedium,
+            color = Color.Black,
+        )
     }
 }
 
